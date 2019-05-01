@@ -1,0 +1,11 @@
+<div class="tierPage">
+  <h2>My Complex Object</h2>
+
+  <ul class="heroes">
+    <li *ngFor="let co of complexObj" class="accordion">
+      <div class="accordionHeader" (click)="co.show = !co.show"><i class="fas fa-plus" *ngIf="!co.show"></i><i class="fas fa-minus" *ngIf="co.show"></i>   &nbsp; {{co.title}}, {{co.owner.name}}</div>
+      <div class="accordionBody" *ngIf="co.show">{{co.description}}</div>
+
+    </li>
+  </ul>
+</div>

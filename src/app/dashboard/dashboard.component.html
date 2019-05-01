@@ -1,0 +1,28 @@
+<div id="dashboard">
+  <!-- hero -->
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px">Welcome to the Angular 7 app!</h1>
+      <p>Tackling one language at a time</p>
+      <!-- <button class="btn btn-primary">Go!</button> -->
+    </div>
+  </div>
+  <!-- key features -->
+  <div class="keyFeatures">
+      <div class="row p-4">
+
+        <div class="col-md-3" *ngFor="let dl of dashList">
+          <div class="flip-block">
+            <div class="flip-block-inner block-front">
+              <h3>{{dl.title}}</h3>
+              <div>{{dl.description}}</div>
+            </div>
+            <div class="flip-block-inner block-back">
+              <div>{{dl.dateCreated | jsonDate | date}}</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</div>
