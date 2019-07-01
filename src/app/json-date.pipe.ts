@@ -11,8 +11,11 @@ export class JsonDatePipe implements PipeTransform {
     if(value) {
       var m = value.match(re);
       var n = value.match(neg);
-      if( m ) value = new Date(parseInt(m[1]));
-      if( n ) value = new Date(parseInt(-n[1]));
+      if( m ) {value = new Date(parseInt(m[1], 10));}
+      if( n ) {
+        n = -n[1]
+        value = new Date(parseInt(n, 10));
+      }
       else return value;
     }
     return value;

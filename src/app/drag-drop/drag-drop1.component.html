@@ -1,0 +1,155 @@
+<div class="tierPage">
+  <div class="container" style="margin-bottom:50px; padding:30px; border: 1px dashed white;">
+    <!-- Dynamic Structures -->
+    <!-- <div *ngFor="let structure of listStructures">
+      <div class="row">
+        <div *ngFor="let column of structure.columns"  class="{{column.className}}">
+          Column
+        </div>
+      </div>
+    </div> -->
+    <!-- ngx-drag-drop -->
+    <pre *ngIf="lastDropEvent" style="color:#555;">{{ nestableListContainer | json }}</pre>
+
+    <div class="layout-padding" style="padding:15px;">
+      <ng-template #recursiveList let-list>
+        <div dndPlaceholderRef class="dndPlaceholder"></div>
+        <div *ngFor="let item of list"
+                  [dndDraggable]="item"
+                  dndEffectAllowed="move"
+                  [dndDisableIf]="item.disable"
+                  (dndStart)="onDragStart($event)"
+                  (dndCopied)="onDragged(item, list, 'copy')"
+                  (dndLinked)="onDragged(item, list, 'link')"
+                  (dndMoved)="onDragged(item, list, 'move')"
+                  (dndCanceled)="onDragged(item, list, 'none')"
+                  (dndEnd)="onDragEnd($event)"
+                  style="border-radius: 5px; border:1px dashed #0e1e7b; min-height:50px; padding:1px; margin-bottom: 15px;"
+        >
+          <span style="padding: 10px;"><i class="fal fa-expand-arrows-alt" *ngIf="item.handle" dndHandle></i></span>
+
+          <span *ngIf="!item.isStructural"><img src="{{item.image}}" style="width:100%; max-height:70px;"></span>
+
+          <div *ngIf="item.isStructural" style=" min-height:50px;">
+            <div *ngIf="item.guid === '{4}'">
+              <div class='row'>
+                <div class='col col-md-4 bg-warning testColor'>
+                    <div *ngIf="item.children" dndDropzone (dndDrop)="onDrop($event, item.children[0].child)" style="padding:3px; background: #f5eac9; border-radius: 5px; border:1px dashed #b5043d; min-height:50px;">
+                      <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children[0].child }"></ng-container>
+                    </div>
+                </div>
+                <div class='col col-md-8 bg-info testColor'>
+                  <div dndDropzone (dndDrop)="onDrop($event, item.children[1].child)" style="padding:3px; background: #f5eac9; border-radius: 5px; border:1px dashed #b5043d; min-height:50px;">
+                    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children[1].child }"></ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="item.guid === '{5}'">
+              <div class='row'>
+                <div class='col col-md-4 bg-warning testColor'>
+                    <div *ngIf="item.children" dndDropzone (dndDrop)="onDrop($event, item.children[0].child)" style="padding:3px; background: #f5eac9; border-radius: 5px; border:1px dashed #b5043d; min-height:50px;">
+                      <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children[0].child }"></ng-container>
+                    </div>
+                </div>
+                <div class='col col-md-4 bg-info testColor'>
+                  <div dndDropzone (dndDrop)="onDrop($event, item.children[1].child)" style="padding:3px; background: #f5eac9; border-radius: 5px; border:1px dashed #b5043d; min-height:50px;">
+                    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children[1].child }"></ng-container>
+                  </div>
+                </div>
+                <div class='col col-md-4 bg-success testColor'>
+                  <div dndDropzone (dndDrop)="onDrop($event, item.children[2].child)" style="padding:3px; background: #f5eac9; border-radius: 5px; border:1px dashed #b5043d; min-height:50px;">
+                    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children[2].child }"></ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dynamic Structures -->
+          <div *ngFor="let structure of listStructures">
+            <div class="row">
+              <div *ngFor="let column of structure.columns; let i = index"  class="{{column.className}}">
+                Column {{i}}
+                <div dndDropzone (dndDrop)="onDrop($event, item.children[i].child)" style="padding:3px; background: #f5eac9; border-radius: 5px; border:1px dashed #b5043d; min-height:50px;">
+                  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children[i].child }"></ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          </div>
+
+      </ng-template>
+
+
+
+
+      <div class="layout-padding testColor" dndDropzone (dndDrop)="onDrop($event, nestableListContainer)" style="background: #ebf3e2;border-radius: 5px; border:1px dashed #cddc39; min-height:50px; padding:1px;">
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: nestableListContainer }"></ng-container>
+      </div>
+
+    </div>
+    <!-- End ngx-drag-drop -->
+
+
+  </div>
+
+
+  <!-- TRASH -->
+  <div dndDropzone dndEffectAllowed="move" (dndDrop)="onDrop($event)" class="dndList" style="border:1px solid green; padding:20px;"> <i class="fal fa-trash-alt" style="font-size:30px;"></i> TRASH
+  </div>
+  <!-- End Trash -->
+
+</div>
+<!-- End Tier Page -->
+
+<div class="dragDropToolPanel" style="position: fixed; left:0; top: 100px; width: 200px; background: white; border: 2px solid #888; min-height:500px;">
+  <ng-template #recursiveList2 let-list>
+    <div dndPlaceholderRef
+              class="dndPlaceholder">
+    </div>
+
+    <div *ngFor="let item2 of list"
+              [dndDraggable]="item2"
+              dndEffectAllowed="copy"
+              [dndDisableIf]="item2.disable"
+              (dndStart)="onDragStart($event)"
+              (dndCopied)="onDragged(item2, list, 'copy')"
+              (dndLinked)="onDragged(item2, list, 'link')"
+              (dndMoved)="onDragged(item2, list, 'move')"
+              (dndCanceled)="onDragged(item2, list, 'none')"
+              (dndEnd)="onDragEnd($event)"
+              style="background: #b7afaf; border-radius:5px; padding:1px; margin-bottom: 4px;">
+
+      <img src="{{item2.image}}" style="width:190px; max-height:70px;">
+
+      <div *ngIf="item2.children"
+           class="layout-padding"
+           dndDropzone
+           (dndDrop)="onDrop($event, item2.children)" style="padding:0px; background: #edfdcc; border-radius: 5px;">
+
+        <ng-container *ngTemplateOutlet="recursiveList2; context:{ $implicit: item2.children }"></ng-container>
+
+      </div>
+
+    </div>
+
+  </ng-template>
+
+  <div class="layout-padding"
+       dndDropzone
+       (dndDrop)="onDrop($event, nestableList)">
+       Hello
+    <ng-container *ngTemplateOutlet="recursiveList2; context:{ $implicit: nestableList }"></ng-container>
+
+  </div>
+</div>
+
+
+
+<!-- <div [innerHTML]="item.html | safeHtml"></div> -->
+<!-- <div style="padding:3px; background: #f5eac9; border-radius: 5px; border:1px dashed #b5043d; min-height:50px;" class="innerDropzone" dndDropzone (dndDrop)="testFunction($event, item.children)"> -->

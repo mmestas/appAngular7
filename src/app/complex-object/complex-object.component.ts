@@ -13,7 +13,6 @@ export class ComplexObjectComponent implements OnInit {
   constructor(private apiSrvc: ApiSrvc) { }
 
   ngOnInit(): void {
-    // this.getComplexObject();
     this.showComplexObject();
   }
 

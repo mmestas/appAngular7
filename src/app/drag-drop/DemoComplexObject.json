@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "title": "New Project",
+      "description": "test",
+      "dateCreated": "/Date(1549897011000)/",
+      "dateClosed": "/Date(-2209143600000)/",
+      "totalEgagements": 3,
+      "totalMessages": 9,
+      "totalConsultantSubmittedEgagements": 3,
+      "owner": {
+        "name": "Leslie Koenig",
+        "firstname": "Leslie",
+        "lastname": "Koenig",
+        "title": "",
+        "email": "leslie+211@contensive.com",
+        "phone": "",
+        "ImageFilename": "/images/placeholders/avatar.png",
+        "isPayer": true,
+        "gpKey": "{a91a4712-2b85-4abc-99f8-5e570e0b1099}"
+      },
+      "Engagements": [
+        {
+          "title": "Title for this",
+          "description": "this is the description"
+        },
+        {
+          "title": "Title for that",
+          "description": "that is the description"
+        }
+      ],
+      "id": "{15d9d588-4796-4dfe-84a9-e274351f5d38}"
+    },
+    {
+      "title": "New Project 2",
+      "description": "Long description",
+      "dateCreated": "/Date(1549897011000)/",
+      "dateClosed": "/Date(-2209143600000)/",
+      "totalEgagements": 3,
+      "totalMessages": 9,
+      "totalConsultantSubmittedEgagements": 3,
+      "owner": {
+        "name": "Leslie Koenig",
+        "firstname": "Leslie",
+        "lastname": "Koenig",
+        "title": "",
+        "email": "leslie+211@contensive.com",
+        "phone": "",
+        "ImageFilename": "/images/placeholders/avatar.png",
+        "isPayer": true,
+        "gpKey": "{a91a4712-2b85-4abc-99f8-5e570e0b1099}"
+      },
+      "Engagements": [
+        {
+          "title": "Title for this",
+          "description": "this is the description"
+        },
+        {
+          "title": "Title for that",
+          "description": "that is the description"
+        }
+      ],
+      "id": "{11111111-4796-4dfe-84a9-e274351f5d38}"
+    }
+  ],
+  "errors": []
+}

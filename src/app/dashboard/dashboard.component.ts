@@ -3,6 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { DashboardList } from '../demo';
 import { ApiSrvc } from '../api-srvc.service';
 import { JsonDatePipe } from '../json-date.pipe';
+// import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-dashboard',

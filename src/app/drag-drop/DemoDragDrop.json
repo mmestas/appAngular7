@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "content": "Design Block Panel",
+      "children": [
+        {
+          "guid": "{1}",
+          "name": "single column",
+          "handle": true,
+          "image": "https://i1.wp.com/thefrontline.org.uk/wp-content/uploads/2018/10/placeholder.jpg",
+          "columns": [
+            {"child": [], "className": "blockTileInner"}
+          ],
+          "wrapperClass": "designBlockContainer blockTile",
+          "outerClass": "container pt-5 pb-5",
+          "innerClass": "",
+          "theme": "theme-reverse-shadow",
+          "isStructural": true
+        },
+        {
+          "guid": "{2}",
+          "name": "two column",
+          "handle": true,
+          "image": "https://i.stack.imgur.com/iXxld.png",
+          "columns": [
+            {"child": [], "className": "col-md-4"},
+            {"child": [], "className": "col-md-8"}
+          ],
+          "wrapperClass": "designBlockContainer blockTwoColumnRight",
+          "outerClass": "pt-5",
+          "innerClass": "row no-gutters",
+          "isStructural": true
+        },
+        {
+          "guid": "{3}",
+          "name": "three column",
+          "handle": true,
+          "image": "https://amethystwebsitedesign.com/wp-content/uploads/2014/06/chrome-post-equal-height.png",
+          "columns": [
+            {"child": [], "className": "col-md-4"},
+            {"child": [], "className": "col-md-4"},
+            {"child": [], "className": "col-md-4"}
+          ],
+          "wrapperClass": "designBlockContainer blockThreeColumn",
+          "outerClass": "container pt-5",
+          "innerClass": "row",
+          "isStructural": true
+        },
+        {
+          "guid": "{4}",
+          "name": "Four column",
+          "handle": true,
+          "image": "https://i.stack.imgur.com/R6h4U.png",
+          "columns": [
+            {"child": [], "className": "col-md-3"},
+            {"child": [], "className": "col-md-3"},
+            {"child": [], "className": "col-md-3"},
+            {"child": [], "className": "col-md-3"}
+          ],
+          "wrapperClass": "designBlockContainer blockThreeColumn",
+          "outerClass": "container pt-5",
+          "innerClass": "row",
+          "isStructural": true
+        },
+        {
+          "guid": "{5}",
+          "isStructural": false,
+          "name": "iconHeaderText",
+          "handle": true,
+          "html": "<div class='designBlockContainer blockTile' style='overflow:hidden;height:405px;background-image:url(http://memberboss.com/memberboss/files/dbtiles/backgroundimagefilename/000000000005/bckgrd3.png)'><div class='theme-reverse-shadow pt-5 pr-4 pb-5 pl-4'><div class='blockTileInner'><div class='blockTileImage centered'><img src='http://memberboss.com/memberboss/files/dbtiles/imagefilename/000000000005/ecommerce.png'></div><h2 class='blockTileHeadline mb-0 centered pt-3'>E-commerce and Account Management</h2><div class='blockTileDescription centered pt-3'><p>Provides robust shopping cart functionality. Empowers a non-technical user to manage, create, and edit online catalog information. Manage accounts, recurring billings and account receivables.</p></div></div></div></div>",
+          "image": "https://phpvideoacademy.com/wp-content/uploads/2018/10/How-to-Build-a-WYSIWYG-Rich-Text-HTML-Editor-Textarea-Replacement-for-Your-Web-Site-CKEditor.jpg"
+        },
+        {
+          "guid": "{6}",
+          "isStructural": false,
+          "name": "Images",
+          "handle": true,
+          "html": "<img src='https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg' style='max-width:100%; '>",
+          "image": "http://clipart-library.com/images/6TyXoMGRc.jpg"
+        },
+        {
+          "guid": "{7}",
+          "isStructural": false,
+          "name": "Slider",
+          "handle": true,
+          "html": "<div id='demo' class='carousel slide' data-ride='carousel'><ul class='carousel-indicators'><li data-target='#demo' data-slide-to='0' class='active'></li><li data-target='#demo' data-slide-to='1'></li><li data-target='#demo' data-slide-to='2'></li> </ul><div class='carousel-inner'><div class='carousel-item active'><img src='http://memberboss.com/memberboss/files/dbcarousel/image4/000000000004/Stronger.jpg' alt='Los Angeles' height='500' style='width:100%;'></div><div class='carousel-item'><img src='https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg' alt='Chicago' height='500' style='width:100%;'></div><div class='carousel-item'><img src='https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg' alt='New York' height='500' style='width:100%;'></img></div></div><a class='carousel-control-prev' href='#demo' data-slide='prev'><span class='carousel-control-prev-icon'></span></a><a class='carousel-control-next' href='#demo' data-slide='next'><span class='carousel-control-next-icon'></span> </a></div>",
+          "image": "https://i.stack.imgur.com/XPICd.png"
+        },
+        {
+          "guid": "{8}",
+          "isStructural": false,
+          "name": "Video",
+          "handle": true,
+          "html": "<iframe style='width:100%; height:100%;' src='https://www.youtube.com/embed/tgbNymZ7vqY'></iframe>",
+          "image": "https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2015/03/youtube-logo2.jpg"
+        },
+        {
+          "guid": "{9}",
+          "isStructural": false,
+          "name": "Contact Form",
+          "handle": true,
+          "html": "<div class='designBlockContainer blockContactForm' style='background-image:url(http://memberboss.com/memberboss/files/dbcontactus/backgroundimagefilename/000000000005/contactus-background.webp)'><div class='container pt-5 pb-5'><div class='blockContactFormInner'><div class='blockContactFormRequest db-row'><div class='width-80 center'><div><h2>Show Your Community Who's Boss</h2><h3>Get Started Today!</h3></div></div><div class='db-col-1'><input type='hidden' name='formInstanceId' value='{698D52AD-ABB1-4375-B182-8716A82893FE}'><div class='db-row'><div class='db-col db-col-2'><div class='db-form-group form-group'><input type='email' class='db-form-control form-control' placeholder='Email *' id='email' name='contactEmail' data-validation-required-message='Please enter your email address.' value='jay@contensive.com' required='></div></div><div class='db-col db-col-2'></div><div class='db-col-1 center'><button type='submit' class='btn btn-primary' name='blockContactFormButton5' value='submit'>Find Out More</button></div></div></div></div></div></div></div>",
+          "image": "https://res.cloudinary.com/ventureharbour-com/image/upload/v1535528523/leadformly.jpg"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
